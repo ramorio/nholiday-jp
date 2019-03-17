@@ -1,12 +1,16 @@
 {
   "name": "nholiday-jp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Japanese national holidays",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramorio/nholiday-jp.git"
+  },
+  "author": "ramorio",
   "license": "ISC",
   "devDependencies": {
     "ava": "^1.3.1",
