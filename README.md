@@ -11,7 +11,7 @@
 2019年の祝日一覧を取得します。
 
 ```js
-import NHolidayJp from 'nholiday-jp';
+const NHolidayJp = require('nholiday-jp');
 
 const holidays = NHolidayJp.getByYear(2019);
 holidays.forEach(v=>
