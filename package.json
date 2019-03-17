@@ -1,6 +1,6 @@
 {
   "name": "nholiday-jp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Japanese national holidays",
   "main": "lib/index.js",
   "scripts": {
@@ -10,6 +10,12 @@
     "type": "git",
     "url": "https://github.com/ramorio/nholiday-jp.git"
   },
+  "keywords": [
+    "holiday",
+    "祝日",
+    "休日",
+    "国民の祝日"
+  ],
   "author": "ramorio",
   "license": "ISC",
   "devDependencies": {
