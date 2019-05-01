@@ -1,7 +1,7 @@
 {
   "name": "nholiday-jp",
-  "version": "1.0.3",
-  "description": "Japanese national holidays",
+  "version": "1.0.4",
+  "description": "Japanese national holidays. 日本の祝日",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava"

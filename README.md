@@ -8,7 +8,10 @@
 
 ## Usage
 
-2019年の祝日一覧を取得します。
+### getByYear(年)
+
+指定した年の祝日一覧を取得します。  
+month, date, name プロパティをもつオブジェクトの配列を返します。
 
 ```js
 const NHolidayJp = require('nholiday-jp');
@@ -39,4 +42,14 @@ holidays.forEach(v=>
 //   11月3日 文化の日
 //   11月4日 振替休日
 //   11月23日 勤労感謝の日
+```
+
+### getName(年, 月, 日)
+
+指定した日付が祝日ならその名称を、祝日でなければnullを返します。
+
+```js
+const NHolidayJp = require('nholiday-jp');
+
+const name = NHolidayJp.getName(2019, 1, 1); // 元日
 ```
