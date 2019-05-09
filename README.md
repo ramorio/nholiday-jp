@@ -44,6 +44,22 @@ holidays.forEach(v=>
 //   11月23日 勤労感謝の日
 ```
 
+### getByMonth(年, 月)
+
+指定した年月の祝日一覧を取得します。  
+month, date, name プロパティをもつオブジェクトの配列を返します。
+
+```js
+const NHolidayJp = require('nholiday-jp');
+
+const holidays = NHolidayJp.getByMonth(2019, 1);
+holidays.forEach(v=>
+  console.log(`${v.month}月${v.date}日 ${v.name}`)
+);
+//=> 1月1日 元日
+//   1月14日 成人の日
+```
+
 ### getName(年, 月, 日)
 
 指定した日付が祝日ならその名称を、祝日でなければnullを返します。
