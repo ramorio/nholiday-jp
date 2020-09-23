@@ -48,6 +48,44 @@ const holidays = {
     [11, 4, '振替休日'],
     [11, 23, '勤労感謝の日'],
   ],
+  '2020': [
+    [1, 1, '元日'],
+    [1, 13, '成人の日'],
+    [2, 11, '建国記念の日'],
+    [2, 23, '天皇誕生日'],
+    [2, 24, '振替休日'],
+    [3, 20, '春分の日'],
+    [4, 29, '昭和の日'],
+    [5, 3, '憲法記念日'],
+    [5, 4, 'みどりの日'],
+    [5, 5, 'こどもの日'],
+    [5, 6, '振替休日'],
+    [7, 23, '海の日'],
+    [7, 24, 'スポーツの日'],
+    [8, 10, '山の日'],
+    [9, 21, '敬老の日'],
+    [9, 22, '秋分の日'],
+    [11, 3, '文化の日'],
+    [11, 23, '勤労感謝の日'],
+  ],
+  '2021': [
+    [1, 1, '元日'],
+    [1, 11, '成人の日'],
+    [2, 11, '建国記念の日'],
+    [2, 23, '天皇誕生日'],
+    [3, 20, '春分の日'],
+    [4, 29, '昭和の日'],
+    [5, 3, '憲法記念日'],
+    [5, 4, 'みどりの日'],
+    [5, 5, 'こどもの日'],
+    [7, 19, '海の日'],
+    [8, 11, '山の日'],
+    [9, 20, '敬老の日'],
+    [9, 23, '秋分の日'],
+    [10, 11, 'スポーツの日'],
+    [11, 3, '文化の日'],
+    [11, 23, '勤労感謝の日'],
+  ],
 };
 
 function getArrayByYear(year) {
@@ -61,6 +99,8 @@ function getArrayByMonth(year, month) {
 // 年
 test('2018', t => t.deepEqual(getArrayByYear(2018), holidays['2018']));
 test('2019', t => t.deepEqual(getArrayByYear(2019), holidays['2019']));
+test('2020', t => t.deepEqual(getArrayByYear(2020), holidays['2020']));
+test('2021', t => t.deepEqual(getArrayByYear(2021), holidays['2021']));
 
 // 年月
 test('201801', t => t.deepEqual(getArrayByMonth(2018, 1), holidays['2018'].filter(v => v[0] === 1)));
@@ -68,3 +108,6 @@ test('201801', t => t.deepEqual(getArrayByMonth(2018, 1), holidays['2018'].filte
 // 年月日
 test('20180101', t => t.is(NHolidayJp.getName(2018, 1, 1), holidays['2018'].find(v => v[0] === 1 && v[1] === 1)[2]));
 test('20180102', t => t.is(NHolidayJp.getName(2018, 1, 2), null));
+
+// Date
+test('20210101', t => t.is(NHolidayJp.getNameByDate(new Date(2021, 0, 1)), holidays['2021'].find(v => v[0] === 1 && v[1] === 1)[2]));
