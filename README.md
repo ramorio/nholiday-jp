@@ -69,3 +69,14 @@ const NHolidayJp = require('nholiday-jp');
 
 const name = NHolidayJp.getName(2019, 1, 1); // 元日
 ```
+
+### getNameByDate(Dateオブジェクト)
+
+指定した日付が祝日ならその名称を、祝日でなければnullを返します。
+
+```js
+const NHolidayJp = require('nholiday-jp');
+
+// 2021年1月1日
+const name = NHolidayJp.getNameByDate(new Date(2021, 0, 1)); // 元日
+```
